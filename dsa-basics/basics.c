@@ -27,3 +27,16 @@ int is_digit(int c) {
     else
         return 0;
 }
+
+// This function multiplies two integers
+// We turn the product to positive when either of the arguments is negative
+int multiply(int a, int b) {
+//    if ((a < 0) || (b < 0)) {
+//        return -(a * b);
+//    } else {
+//        return a * b;
+//    }
+
+    // We can also just return the two values without any check.
+    return a * b;
+}

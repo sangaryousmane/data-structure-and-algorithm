@@ -1,12 +1,13 @@
 #include <stdio.h>
 
 
-int is_digit(int n);
+int multiply(int a, int b);
 
 int main() {
 
-    char c = '3';
-    printf("%c: %d\n", c, is_digit(c));
+
+    int result = multiply(-9, 9);
+    printf("Result is: %d", result);
     puts("\nDONE!!");
     return 0;
 }
