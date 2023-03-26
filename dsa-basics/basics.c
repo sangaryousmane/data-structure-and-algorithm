@@ -98,19 +98,61 @@ void print_line(int n) {
 // Write a function that draws a diagonal line on the terminal
 // this function uses the space variable to provide a space(' ')
 // each time a / character is printed.
-void print_diagonal(int n){
-    int counter, space, end = n-1;
+void print_diagonal(int n) {
+    int counter, space, end = n - 1;
 
-    if (n > 0){
-        for(counter = 0; counter < n; counter++){
-           for (space = 0; space < counter; space++){
-               putchar(' ');
-           }
+    if (n > 0) {
+        for (counter = 0; counter < n; counter++) {
+            for (space = 0; space < counter; space++) {
+                putchar(' ');
+            }
             putchar('\\');
-           if (counter == (end))
-               continue;
-           putchar('\n');
+            if (counter == end)
+                continue;
+            putchar('\n');
         }
     }
     putchar('\n');
+}
+
+// Write a function that prints a square, followed by a new line.
+void print_square(int size) {
+    int i, j, end = size - 1;
+
+    if (size > 0) {
+        for (i = 0; i < size; i++) {
+            for (j = 0; j < end; j++) {
+                putchar('#');
+            }
+            putchar('#');
+            putchar('\n');
+        }
+    } else {
+        putchar('\n');
+    }
+}
+
+
+// This function prints fizzbuzz for multiples of 3 an 5
+// prints Fizz for multiple of 3 and Buzz for multiples of 5
+// It prints the number if all of the above checks are false.
+void fizzBuzz() {
+
+    int i;
+
+    for (i = 1; i <= 100; i++) {
+        if ((i % 5 == 0) && (i % 3 == 0)) {
+            printf("FizzBuzz ");
+        } else if (i % 3 == 0) {
+            printf("Fizz ");
+        } else if (i % 5 == 0) {
+
+            if (i != 100)
+                printf("Buzz "); // print space btw if i is not 10
+            else
+                printf("Buzz");  // don't print space if i reach 100
+        } else {
+            printf("%d ", i);   // print any number that's not a multiple of 3 and 5
+        }
+    }
 }
