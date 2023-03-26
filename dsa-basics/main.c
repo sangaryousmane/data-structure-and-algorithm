@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 
-void is_uppercase(int c);
+int is_digit(int n);
 
-int main(){
+int main() {
 
-    puts("Hello world");
-    is_uppercase(-90);
+    char c = '3';
+    printf("%c: %d\n", c, is_digit(c));
+    puts("\nDONE!!");
     return 0;
 }
