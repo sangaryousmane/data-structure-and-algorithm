@@ -172,3 +172,22 @@ void print_number(int n){
     }
     putchar((num % 10) + '0');
 }
+
+// Count down numbers using recursion
+void countdown(int n) {
+    if (n == 0) {  // Base case
+        printf("DONE!\n");
+    } else {
+        printf("%d\n", n); // print numbers
+        countdown(n-1);       // recursive call
+    }
+}
+
+// Calculate factorial using recursion
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n-1);
+    }
+}
