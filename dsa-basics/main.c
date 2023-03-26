@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 
-int multiply(int a, int b);
+void more_numbers(void);
 
 int main() {
 
 
-    int result = multiply(-9, 9);
-    printf("Result is: %d", result);
-    puts("\nDONE!!");
+    more_numbers();
+    printf("%d ", 14 % 10);
     return 0;
 }
