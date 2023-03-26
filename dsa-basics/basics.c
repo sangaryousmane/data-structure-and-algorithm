@@ -56,7 +56,7 @@ void print_numbers(void) {
 void print_most_numbers(void) {
     int i;
 
-    for (i = 0; i < 10; i++){
+    for (i = 0; i < 10; i++) {
         if ((i == 2) || (i == 4))
             continue;
         putchar(i + '0');
@@ -64,20 +64,53 @@ void print_most_numbers(void) {
     putchar('\n');
 }
 
-void more_numbers(void){
+// Print from 0 to 14 ten times
+void more_numbers(void) {
 //    for i = 0 to 10
 //            for i = 0 to 14
 //    print newline
 
-     int i, j;
-     for(i = 1; i <= 10; i++){
+    int i, j;
+    for (i = 1; i <= 10; i++) {
 
-         for (j = 0; j <= 14; j++){
-             if (j > 9) {
-                 putchar((j / 10) + '0');
-             }
-             putchar((j % 10) + '0');
-         }
-         putchar('\n');
-     }
+        for (j = 0; j <= 14; j++) {
+            if (j > 9) {
+                putchar((j / 10) + '0');
+            }
+            putchar((j % 10) + '0');
+        }
+        putchar('\n');
+    }
+}
+
+// print the underscore character n times
+void print_line(int n) {
+    int i;
+
+    if (n > 0) {
+        for (i = 0; i < n; i++) {
+            putchar('_');
+        }
+    }
+    putchar('\n');
+}
+
+// Write a function that draws a diagonal line on the terminal
+// this function uses the space variable to provide a space(' ')
+// each time a / character is printed.
+void print_diagonal(int n){
+    int counter, space, end = n-1;
+
+    if (n > 0){
+        for(counter = 0; counter < n; counter++){
+           for (space = 0; space < counter; space++){
+               putchar(' ');
+           }
+            putchar('\\');
+           if (counter == (end))
+               continue;
+           putchar('\n');
+        }
+    }
+    putchar('\n');
 }

@@ -1,12 +1,15 @@
 #include <stdio.h>
 
 
-void more_numbers(void);
+void print_diagonal(int n);
 
 int main() {
 
 
-    more_numbers();
-    printf("%d ", 14 % 10);
+    print_diagonal(0);
+    print_diagonal(2);
+    print_diagonal(10);
+    print_diagonal(-4);
+//    printf("%d ", 14 % 10);
     return 0;
 }
