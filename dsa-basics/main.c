@@ -1,13 +1,14 @@
 #include <stdio.h>
+#include <string.h>
 
-
-int factorial(int n);
+void do_puts(char *s);
 
 int main() {
 
-    int n= 5;
-    printf("The factorial of %d is %d ", n, factorial(5));
+    char *str;
 
-//    printf("%d ", 14 % 10);
+    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    strrev(str);
+    do_puts(str);
     return 0;
 }
