@@ -1,0 +1,22 @@
+# ninja log v5
+3	620	7017512637419225	CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj	ce843a85ef9e4089
+620	995	7017512641119195	ClionProject.exe	46326c96278baafe
+38	676	7015230736124194	CMakeFiles/ClionProject.dir/dsa-basics/basics.c.obj	2b4c78bcacb3cbdc
+63	651	7016270714862446	CMakeFiles/ClionProject.dir/dsa-basics/basics1.c.obj	53a722a7ca217004
+32	619	7017512637419225	CMakeFiles/ClionProject.dir/dsa-basics/basics2.c.obj	8b09be18eea0a538
+3	714	7017513628758510	CMakeFiles/ClionProject.dir/dsa-basics/basics2.c.obj	8b09be18eea0a538
+715	1127	7017513632788830	ClionProject.exe	46326c96278baafe
+2	202	7017514165760053	CMakeFiles/ClionProject.dir/dsa-basics/basics2.c.obj	8b09be18eea0a538
+204	489	7017514168410095	ClionProject.exe	46326c96278baafe
+3	611	7017530551566695	CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj	ce843a85ef9e4089
+33	613	7017530551566695	CMakeFiles/ClionProject.dir/dsa-basics/basics2.c.obj	8b09be18eea0a538
+614	973	7017530555124053	ClionProject.exe	46326c96278baafe
+3	603	7017539476469028	CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj	ce843a85ef9e4089
+38	605	7017539476469028	CMakeFiles/ClionProject.dir/dsa-basics/basics2.c.obj	8b09be18eea0a538
+612	1008	7017539480487741	ClionProject.exe	46326c96278baafe
+3	158	7017540152758235	CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj	ce843a85ef9e4089
+159	427	7017540155355626	ClionProject.exe	46326c96278baafe
+3	158	7017540225123115	CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj	ce843a85ef9e4089
+159	468	7017540228130386	ClionProject.exe	46326c96278baafe
+3	600	7017550137640546	CMakeFiles/ClionProject.dir/dsa-basics/basics2.c.obj	8b09be18eea0a538
+601	1017	7017550141759052	ClionProject.exe	46326c96278baafe
