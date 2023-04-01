@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-int print_lowercase_reverse();
+int single_digits();
 int main() {
 
-    print_lowercase_reverse();
+    single_digits();
     return (0);
 }
 
