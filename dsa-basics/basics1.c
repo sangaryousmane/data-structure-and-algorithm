@@ -161,7 +161,7 @@ void fizzBuzz() {
 // Write a function that prints an integer.
 
 void print_number(int n){
-    long num = n;
+     unsigned int num = n;
 
     if (n < 0){
         putchar('-');

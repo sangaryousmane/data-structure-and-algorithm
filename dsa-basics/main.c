@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 
-void puts_half(char *s);
-
+int positive_negative();
 int main() {
 
-    char *str;
-
-    str = "Peter";
-    puts_half(str);
+    positive_negative();
     return (0);
 }
+
+
+

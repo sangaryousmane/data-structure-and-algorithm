@@ -46,7 +46,9 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -85,7 +87,9 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -107,6 +111,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "dsa-basics/basics2.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dsa-basics/basics3.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dsa-basics/very_basics.c",
 			"sourceGroupIndex" : 0
 		}
 	],
