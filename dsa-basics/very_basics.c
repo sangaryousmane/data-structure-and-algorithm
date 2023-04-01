@@ -113,3 +113,20 @@ int print_lower_and_upper(){
     putchar('\n');
     return 0;
 }
+
+// #5 Write a program that prints the alphabet in lowercase, followed by a new line.
+// Print all the letters except q and e
+int print_lower_except(){
+    int i;
+    i = 'a';
+
+    // This for loop is going to print all lowercase but not e and q
+    for (; i <= 'z'; i++){
+        if (i == 'e' || i == 'q') {
+            continue;
+        }
+        putchar(i);
+    }
+    putchar('\n');
+    return 0;
+}
