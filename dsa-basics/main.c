@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-int positive_negative();
+int print_lower_and_upper();
 int main() {
 
-    positive_negative();
+    print_lower_and_upper();
     return (0);
 }
 

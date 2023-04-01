@@ -62,3 +62,54 @@ int positive_negative(void)
         printf("%d is negative\n", n);
     return (0);
 }
+
+// #2
+int last_digit(){
+    int n;
+    srand(time(0));
+    n = rand() - RAND_MAX / 2;
+
+    // mimic the last digit number % 10
+
+    if ((n % 10) > 5) {
+        printf("Last digit of %d is %d and is greater than 5", n, n % 10);
+    }
+    else if ((n % 10) < 6 && (n%10)  != 0)
+        printf("Last digit of %d is %d and is less than 6 and not 0 ", n, n%10);
+    else
+        printf("Last digit of %d is %d and is 0", n, n%10);
+    return 0;
+}
+
+// #3 Write a program that prints the alphabet in lowercase, followed by a new line.
+int print_lowercase(){
+    int i;
+    i = 97;
+    // print all lowercase with newline
+    while (i <= 122){
+        putchar(i);
+        i++;
+    }
+    putchar('\n');
+    return 0;
+}
+
+// #4 Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
+int print_lower_and_upper(){
+    int i, j;
+    i = 97;
+    j = 65;
+
+    // print lowercase first
+    while (i <= 122){
+        putchar(i);
+        i++;
+    }
+
+    // print uppercase with a newline
+    for (; j <=90; j++){
+        putchar(j);
+    }
+    putchar('\n');
+    return 0;
+}
