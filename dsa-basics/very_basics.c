@@ -130,3 +130,27 @@ int print_lower_except(){
     putchar('\n');
     return 0;
 }
+// Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+// #6 and #7 are the same, just the way it is printed different.
+int print_base10(){
+    int i;
+    i = 0;
+    for (; i < 10; i++){
+        putchar(i + '0');
+    }
+    putchar('\n');
+    return 0;
+}
+
+// #8 Write a program that prints the lowercase alphabet in reverse, followed by a new line.
+int print_lowercase_reverse(){
+    int i;
+    i = 122;
+
+    while (i >= 97) {
+        putchar(i);
+        i--;
+    }
+    putchar('\n');
+    return 0;
+}

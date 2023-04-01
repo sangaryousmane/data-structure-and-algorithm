@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-int print_lower_except();
+int print_lowercase_reverse();
 int main() {
 
-    print_lower_except();
+    print_lowercase_reverse();
     return (0);
 }
 
