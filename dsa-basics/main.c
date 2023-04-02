@@ -2,10 +2,11 @@
 #include <string.h>
 
 int do_putchar(int a);
-void print_alphabet_x10();
+int do_islower(int a);
 int main(void) {
 
-    print_alphabet_x10();
+    int result = do_islower('F');
+    putchar(result + '0');
     return 0;
 }
 
