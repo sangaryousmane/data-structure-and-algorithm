@@ -2,10 +2,10 @@
 #include <string.h>
 
 int do_putchar(int a);
-void print_alphabet();
+void print_alphabet_x10();
 int main(void) {
 
-    print_alphabet();
+    print_alphabet_x10();
     return 0;
 }
 

@@ -19,3 +19,18 @@ void print_alphabet(){
     }
     do_putchar('\n');
 }
+
+// Write a function that prints 10 times the alphabet, in lowercase, followed by a new line.
+void print_alphabet_x10(){
+    int count, letter;
+    letter = 97;
+    count = 0;
+
+    for (; count <= 9; count++){
+        while (letter <= 122){
+            do_putchar(letter);
+            letter++;
+        }
+        do_putchar('\n');
+    }
+}
