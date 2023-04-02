@@ -2,11 +2,19 @@
 #include <string.h>
 
 int do_putchar(int a);
-int do_isalpha(int a);
+int do_abs(int a);
 int main(void) {
 
-    int result = do_isalpha('e');
-    putchar(result + '0');
+    int r;
+
+    r = do_abs(-1);
+    printf("%d\n", r);
+    r = do_abs(0);
+    printf("%d\n", r);
+    r = do_abs(1);
+    printf("%d\n", r);
+    r = do_abs(-98);
+    printf("%d\n", r);
     return 0;
 }
 

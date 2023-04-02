@@ -53,3 +53,29 @@ int do_isalpha(int c){
         return 0;
     }
 }
+
+// Write a function that prints the sign of a number.
+int print_sign(int n){
+
+    if (n > 0){
+        do_putchar('+');
+        return 1;
+    } else if(n == 0){
+        do_putchar('0');
+        return 0;
+    } else{
+        do_putchar('-');
+        return -1;
+    }
+}
+
+// Write a function that computes the absolute value of an integer.
+int do_abs(int n){
+
+    // TODO: please note that zero is a positive number
+    if (n < 0)
+        n = -n;
+    else
+        n = n;
+    return n;
+}
