@@ -2,19 +2,16 @@
 #include <string.h>
 
 int do_putchar(int a);
-int do_abs(int a);
+int print_last_digit(int a);
 int main(void) {
 
     int r;
 
-    r = do_abs(-1);
-    printf("%d\n", r);
-    r = do_abs(0);
-    printf("%d\n", r);
-    r = do_abs(1);
-    printf("%d\n", r);
-    r = do_abs(-98);
-    printf("%d\n", r);
+    print_last_digit(98);
+    print_last_digit(0);
+    r = print_last_digit(-1024);
+    do_putchar('0' + r);
+    do_putchar('\n');
     return 0;
 }
 
