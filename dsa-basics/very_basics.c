@@ -156,6 +156,7 @@ int print_lowercase_reverse() {
 }
 
 // #9 Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.
+// Use putchar only
 int print_base16_lower() {
     int j = 0;
 
@@ -172,6 +173,7 @@ int print_base16_lower() {
 }
 
 // #10 Write a program that prints all possible combinations of single-digit numbers.
+// Use putchar only
 int single_digits() {
     int i = 0;
 
@@ -181,9 +183,131 @@ int single_digits() {
         if (i < 9) {          // check whether the number is less than 9
             putchar(',');  // print comma if it is.
             putchar(' ');  // and a space
-        }
-        else
+        } else
             putchar(' '); // print only a space if not
     }
     return 0;
+}
+
+// #11 Write a program that prints all possible different combinations of two digits.
+// Use putchar only
+int comb_two_digits() {
+    int i = 0, j;
+
+    // traverse until less than 10
+    for (; i < 10; i++) {
+
+        // Traverse until less than 10 but start at i+1
+        for (j = i + 1; j < 10; j++) {
+            putchar((i % 10) + '0');
+            putchar((j % 10) + '0');
+
+            // Check if first number is 8 and second is 9
+            if (i == 8 && j == 9)
+                continue;
+
+            putchar(',');
+            putchar(' ');
+        }
+    }
+    putchar('\n');
+    return 0;
+}
+
+// #12 Write a program that prints all possible different combinations of three digits.
+// Use putchar only
+int comb_three_digits() {
+    int i, j, k;
+
+    for (i = 0; i <= 7; i++) {
+        for (j = 0; j <= 8; j++) {
+            for (k = 0; k <= 9; k++) {
+                putchar((i % 10) + '0');
+                putchar((j % 10) + '0');
+                putchar((k % 10) + '0');
+
+                if (i == 7 && j == 8 && k == 9)
+                    continue;
+
+                putchar(',');
+                putchar(' ');
+            }
+        }
+    }
+    putchar('\n');
+    return 0;
+}
+
+// #13 Write a program that prints all possible combinations of two two-digit numbers.
+// Use putchar only
+int comb_two_two_digit() {
+    // int i, j;
+    // nested loop to 99
+    // print i % 10 and i / 10 with a space
+    // do same for j % 10 and j /10 with a space
+    // check is i== 98 and j==99 skip
+    // print a newline
+
+    int i, j;
+    for (i = 0; i <= 98; i++) {
+        for (j = i + 1; j <= 99; j++) {
+            putchar((i / 10) + '0');
+            putchar((i % 10) + '0');
+            putchar(' ');
+
+            putchar((j / 10) + '0');
+            putchar((j % 10) + '0');
+            putchar(' ');
+
+            if (i == 98 && j == 99)
+                continue;
+
+            putchar(',');
+            putchar(' ');
+        }
+    }
+    putchar('\n');
+    return 0;
+
+}
+
+// prints the largest of three integers.
+int largest_of_three(int a, int b, int c) {
+    int largest;
+
+    if (a >= b && a >= c) {
+        largest = a;
+    } else if (b >= a && b >= c) {
+        largest = b;
+    } else {
+        largest = c;
+    }
+    printf("%d is the largest", largest);
+    return 0;
+}
+
+/**
+* print_remaining_days - takes a date and prints how many days are
+* left in the year, taking leap years into account
+* @month: month in number format
+* @day: day of month
+* @year: year
+* Return: void
+*/
+void print_remaining_days(int month, int day, int year) {
+    if ((year % 4 == 0) && (year % 400 == 0 || year % 100 != 0)) {
+        if (month >= 3 && day >= 60) {
+            day++;
+        }
+
+        printf("Day of the year: %d\n", day);
+        printf("Remaining days: %d\n", 366 - day);
+    } else {
+        if (month == 2 && day == 60) {
+            printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
+        } else {
+            printf("Day of the year: %d\n", day);
+            printf("Remaining days: %d\n", 365 - day);
+        }
+    }
 }
