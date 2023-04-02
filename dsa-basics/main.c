@@ -1,14 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 
-int largest_of_three(int a, int b, int c);
-
+int do_putchar(int a);
+void print_alphabet();
 int main(void) {
-    int a, b, c;
-    a = 972;
-    b = -98;
-    c = 0;
-    largest_of_three(a, b, c);
+
+    print_alphabet();
     return 0;
 }
 

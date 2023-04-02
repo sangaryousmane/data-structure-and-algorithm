@@ -49,6 +49,12 @@ cmake_ninja_workdir = C$:/Users/sanga/Documents/ClionProject/c-programming/cmake
 
 build cmake_object_order_depends_target_ClionProject: phony || CMakeFiles/ClionProject.dir
 
+build CMakeFiles/ClionProject.dir/dsa-basics2/functions_.c.obj: C_COMPILER__ClionProject_Debug C$:/Users/sanga/Documents/ClionProject/c-programming/dsa-basics2/functions_.c || cmake_object_order_depends_target_ClionProject
+  DEP_FILE = CMakeFiles\ClionProject.dir\dsa-basics2\functions_.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ClionProject.dir
+  OBJECT_FILE_DIR = CMakeFiles\ClionProject.dir\dsa-basics2
+
 build CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj: C_COMPILER__ClionProject_Debug C$:/Users/sanga/Documents/ClionProject/c-programming/dsa-basics/main.c || cmake_object_order_depends_target_ClionProject
   DEP_FILE = CMakeFiles\ClionProject.dir\dsa-basics\main.c.obj.d
   FLAGS = -g -fdiagnostics-color=always
@@ -87,7 +93,7 @@ build CMakeFiles/ClionProject.dir/dsa-basics/very_basics.c.obj: C_COMPILER__Clio
 #############################################
 # Link the executable ClionProject.exe
 
-build ClionProject.exe: C_EXECUTABLE_LINKER__ClionProject_Debug CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics1.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics2.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics3.c.obj CMakeFiles/ClionProject.dir/dsa-basics/very_basics.c.obj
+build ClionProject.exe: C_EXECUTABLE_LINKER__ClionProject_Debug CMakeFiles/ClionProject.dir/dsa-basics2/functions_.c.obj CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics1.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics2.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics3.c.obj CMakeFiles/ClionProject.dir/dsa-basics/very_basics.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ClionProject.dir
