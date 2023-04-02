@@ -43,3 +43,13 @@ int do_islower(int c){
     else
         return 0;
 }
+
+// Write a function that checks for alphabetic character.
+int do_isalpha(int c){
+
+    if ((c >='a' && c <= 'z') || (c >='A' && c <= 'Z')){
+        return 1;
+    } else{
+        return 0;
+    }
+}

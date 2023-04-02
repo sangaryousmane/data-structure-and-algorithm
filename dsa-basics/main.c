@@ -2,10 +2,10 @@
 #include <string.h>
 
 int do_putchar(int a);
-int do_islower(int a);
+int do_isalpha(int a);
 int main(void) {
 
-    int result = do_islower('F');
+    int result = do_isalpha('e');
     putchar(result + '0');
     return 0;
 }
