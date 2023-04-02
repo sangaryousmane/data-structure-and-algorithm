@@ -93,18 +93,18 @@ int print_last_digit(int n) {
 }
 
 // Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
-void jack_bauer(){
+void jack_bauer() {
     int hours, minutes;
 
-    for (hours = 0; hours < 24; hours++){
-        for (minutes =0; minutes < 60; minutes++){
+    for (hours = 0; hours < 24; hours++) {
+        for (minutes = 0; minutes < 60; minutes++) {
             printf("%02d:%02d\n", hours, minutes);
         }
     }
 }
 
 // Write a function that adds two integers and returns the result.
-int add(int a, int b){
+int add(int a, int b) {
     return a + b;
 }
 
@@ -112,15 +112,35 @@ int add(int a, int b){
 * If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
  * The sum of these multiples is 23. Write a program that computes and prints the sum of all the multiples of 3 or 5 below 1024 (excluded), followed by a new line.
 */
-int natural_sum35(){
+int natural_sum35() {
     int i;
-    i = 0;
+    i = 1;
     int sum = 0;
-    for (; i <  1024; i++){
-        if (i % 3 ==0 || i % 5 == 0){
-            sum +=i;
+    for (; i < 1024; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+            sum += i;
         }
     }
     printf("%d\n", sum);
+    return 0;
 
+}
+
+
+// Write a program that prints the first 50 Fibonacci numbers, starting with 1 and 2, followed by a new line.
+int fib1() {
+    long i, n = 10, temp;
+    long num1 = 1, num2 = 2;
+    for (i = 0; i < n; i++) {
+
+        if (num1 != 20365011074) {
+            printf("%ld, ", num1);
+        } else {
+            printf("%ld\n", num1);
+        }
+        temp = num1 + num2; // Add the first and second numbers and swap
+        num1 = num2;
+        num2 = temp;
+    }
+    return 0;
 }

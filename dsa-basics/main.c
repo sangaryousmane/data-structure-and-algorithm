@@ -2,10 +2,10 @@
 #include <string.h>
 
 int do_putchar(int a);
-void natural_sum35();
+int fib1();
 int main(void) {
 
-    natural_sum35();
+    fib1();
     return 0;
 }
 
