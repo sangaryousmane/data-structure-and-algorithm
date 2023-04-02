@@ -2,11 +2,10 @@
 #include <string.h>
 
 int do_putchar(int a);
-void jack_bauer();
+void natural_sum35();
 int main(void) {
 
-    int r;
-    jack_bauer();
+    natural_sum35();
     return 0;
 }
 
