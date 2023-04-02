@@ -2,16 +2,11 @@
 #include <string.h>
 
 int do_putchar(int a);
-int print_last_digit(int a);
+void jack_bauer();
 int main(void) {
 
     int r;
-
-    print_last_digit(98);
-    print_last_digit(0);
-    r = print_last_digit(-1024);
-    do_putchar('0' + r);
-    do_putchar('\n');
+    jack_bauer();
     return 0;
 }
 
