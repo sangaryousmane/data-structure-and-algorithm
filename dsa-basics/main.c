@@ -1,16 +1,28 @@
 #include <stdio.h>
 #include <string.h>
 
-char *do_memcpy(char *a, char *b, int n);
+char *do_strchr(char *a, char b);
 void simple_print_buffer(char *a, unsigned int n);
-int main(void) {
-    char buffer[98] = {0};
-    char buffer2[98] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
 
-    simple_print_buffer(buffer, 98);
-    do_memcpy(buffer + 50, buffer2, 10);
-    printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 98);
+char *do_that(char *s){
+    int len =0;
+    while (s[len] !='\0') {
+        len++;
+    }
+    printf("%d", len);
+    return s;
+}
+int main(void) {
+    char *s = "hello";
+    char *f;
+
+    f = do_strchr(s, 'l');
+
+    if (f != NULL)
+    {
+        printf("%s\n", f);
+    }
+
     return 0;
 }
 
