@@ -42,5 +42,34 @@ int two_2_array2(){
             {1, 2, 3, 4},
             {5, 6, 7, 8}};
 
+    for (int row = 0; row < 2; row++){
+        for (int column = 0; column < 4; column++){
+            printf("Please enter array: array_2D[%drow][%dcolumn]", row, column);
+            scanf("%d", &array_2D[row][column]);
+        }
+    }
     return 0;
+}
+
+// Write a function that fills memory with a constant byte.
+// mimic memset and return the string pointer
+
+char *do_memset(char *s, char b, int n){
+    unsigned int count = 0;
+
+    for (; count < n; count++){
+        s[count] = b;
+    }
+    return s;
+}
+
+// Write a function that copies memory area.
+// The _memcpy() function copies n bytes from memory area src to memory area dest
+char *do_memcpy(char *dest, char *src, int n){
+    unsigned int count = 0;
+    while (count < n){
+        *(dest + count) = src[count]; // copying the value in src to dest
+        count++;
+    }
+    return (dest);
 }

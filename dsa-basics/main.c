@@ -1,24 +1,42 @@
 #include <stdio.h>
 #include <string.h>
 
-int do_putchar(int a);
-int two_2_array();
-void pointers(int **add);
-
+char *do_memcpy(char *a, char *b, int n);
+void simple_print_buffer(char *a, unsigned int n);
 int main(void) {
+    char buffer[98] = {0};
+    char buffer2[98] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
 
-    int add[2] = {3, 4};
-
-    two_2_array();
+    simple_print_buffer(buffer, 98);
+    do_memcpy(buffer + 50, buffer2, 10);
+    printf("-------------------------------------------------\n");
+    simple_print_buffer(buffer, 98);
     return 0;
 }
 
-void pointers(int **add) {
-    printf("address of the array first element is: %p\n", (*add));
-    printf("address of the array is: %p\n", add);
-    printf("size of the array is: %lld\n", sizeof(*add));
-    printf("size of the array address is: %lld\n", sizeof(add));
+
+
+void simple_print_buffer(char *buffer, unsigned int size)
+{
+    unsigned int i;
+
+    i = 0;
+    while (i < size)
+    {
+        if (i % 10)
+        {
+            printf(" ");
+        }
+        if (!(i % 10) && i)
+        {
+            printf("\n");
+        }
+        printf("0x%02x", buffer[i]);
+        i++;
+    }
+    printf("\n");
 }
+
 
 int print_double_combination_numbers() {
     int i;
