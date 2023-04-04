@@ -97,7 +97,7 @@ unsigned int do_strspn(char *s, char *accept){
         for (j = 0; accept[j] > '\0'; j++){  // Goes through each letter of the word accept
             if (s[i] == accept[j]){   // Check if any letter in s that is same as in accept
                 bytes++;               // Add 1 to bytes if it is
-                break;
+                break;               // breaks out
             }
         }
         /*
