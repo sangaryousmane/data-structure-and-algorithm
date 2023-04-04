@@ -77,17 +77,36 @@ char *do_memcpy(char *dest, char *src, int n) {
 // Write a function that locates a character in a string.
 char *do_strchr(char *s, char c) {
 
-    while (*s != '\0'){  // Check the entire string until it reaches the end
-        if (*s == c){ // check for the character in the string
-            return s;  // return if found
+   int index = 0; // Initialize the index at 0
+
+    while (s[index] >='\0'){   // Loop as long the string is not end
+        if (s[index] == c) { // check for the occurrence of the character c in the string
+            return &s[index]; // return if found
         }
-        s++;  // increment( go to the next character)
+        index++;    // increment to the next
     }
-    // Check if the character is the end character \0
-    if (c == '\0')  // check if the character is the last one
-        return s;  // return if it is.
-    else
-        return NULL;  // return a null if none is true.
+    return (NULL);   // return null if not
+}
 
 
+unsigned int do_strspn(char *s, char *accept){
+    unsigned int bytes = 0;
+    int i, j;
+
+    for (i = 0; s[i] > '\0'; i++){  // Goes through each letter of the word s
+        for (j = 0; accept[j] > '\0'; j++){  // Goes through each letter of the word accept
+            if (s[i] == accept[j]){   // Check if any letter in s that is same as in accept
+                bytes++;               // Add 1 to bytes if it is
+                break;
+            }
+        }
+        /*
+         * The inner loop goes through each character of the string accept by checking if accept[j] is not equal to the null character ('\0'). If accept[j] is the null character, it means we have gone through all the characters in accept, and there is no need to continue the inner loop.
+         *So, the condition if (!accept[j]) checks if accept[j] is the null character, and if it is, the break statement is executed, which breaks out of the inner loop. This saves time and resources by avoiding unnecessary iterations of the inner loop.
+         */
+        if (!accept[j]){
+            break;
+        }
+    }
+    return bytes;
 }

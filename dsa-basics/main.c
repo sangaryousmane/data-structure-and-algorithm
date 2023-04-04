@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char *do_strchr(char *a, char b);
+unsigned int do_strspn(char *a, char *b);
 void simple_print_buffer(char *a, unsigned int n);
 
 char *do_that(char *s){
@@ -13,16 +13,12 @@ char *do_that(char *s){
     return s;
 }
 int main(void) {
-    char *s = "hello";
-    char *f;
+    char *s = "hello, world";
+    char *f = "oleh";
+    unsigned int n;
 
-    f = do_strchr(s, 'l');
-
-    if (f != NULL)
-    {
-        printf("%s\n", f);
-    }
-
+    n = do_strspn(s, f);
+    printf("%u\n", n);
     return 0;
 }
 
