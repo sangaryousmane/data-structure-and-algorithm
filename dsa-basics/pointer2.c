@@ -77,9 +77,9 @@ char *do_memcpy(char *dest, char *src, int n) {
 // Write a function that locates a character in a string.
 char *do_strchr(char *s, char c) {
 
-   int index = 0; // Initialize the index at 0
+    int index = 0; // Initialize the index at 0
 
-    while (s[index] >='\0'){   // Loop as long the string is not end
+    while (s[index] >= '\0') {   // Loop as long the string is not end
         if (s[index] == c) { // check for the occurrence of the character c in the string
             return &s[index]; // return if found
         }
@@ -89,13 +89,13 @@ char *do_strchr(char *s, char c) {
 }
 
 
-unsigned int do_strspn(char *s, char *accept){
+unsigned int do_strspn(char *s, char *accept) {
     unsigned int bytes = 0;
     int i, j;
 
-    for (i = 0; s[i] > '\0'; i++){  // Goes through each letter of the word s
-        for (j = 0; accept[j] > '\0'; j++){  // Goes through each letter of the word accept
-            if (s[i] == accept[j]){   // Check if any letter in s that is same as in accept
+    for (i = 0; s[i] > '\0'; i++) {  // Goes through each letter of the word s
+        for (j = 0; accept[j] > '\0'; j++) {  // Goes through each letter of the word accept
+            if (s[i] == accept[j]) {   // Check if any letter in s that is same as in accept
                 bytes++;               // Add 1 to bytes if it is
                 break;               // breaks out
             }
@@ -104,9 +104,44 @@ unsigned int do_strspn(char *s, char *accept){
          * The inner loop goes through each character of the string accept by checking if accept[j] is not equal to the null character ('\0'). If accept[j] is the null character, it means we have gone through all the characters in accept, and there is no need to continue the inner loop.
          *So, the condition if (!accept[j]) checks if accept[j] is the null character, and if it is, the break statement is executed, which breaks out of the inner loop. This saves time and resources by avoiding unnecessary iterations of the inner loop.
          */
-        if (!accept[j]){
+        if (!accept[j]) {
             break;
         }
     }
     return bytes;
 }
+
+// Write a function that prints a chessboard
+void print_chessboard(char (*a)[8]) {
+    int i, j;
+
+    for (i = 0; i < 8; i++) {   // Goes through each row of the array
+        for (j = 0; j < 8; j++) {  // Goes through each column of the array
+            putchar(a[i][j]);
+        }
+        putchar('\n');
+    }
+}
+
+// Write a function that prints the sum of the two diagonals of a square matrix of integers.
+void print_diagsums(int *a, int size) {
+    int index = 0, sum1 = 0, sum2 = 0;
+
+    while (index < size) {
+        sum1 += a[index];
+        a += size;
+        index++;
+    }
+
+    a -= size;
+    index = 0;
+
+    while (index < size) {
+        sum2 += a[index];
+        a -= size;
+        index++;
+    }
+    printf("%d, %d\n", sum1, sum2);
+
+}
+

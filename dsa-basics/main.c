@@ -2,41 +2,45 @@
 #include <string.h>
 
 unsigned int do_strspn(char *a, char *b);
-void simple_print_buffer(char *a, unsigned int n);
+void print_diagsums1(int *a, int size);
 
-char *do_that(char *s){
-    int len =0;
-    while (s[len] !='\0') {
+char *do_that(char *s) {
+    int len = 0;
+    while (s[len] != '\0') {
         len++;
     }
     printf("%d", len);
     return s;
 }
-int main(void) {
-    char *s = "hello, world";
-    char *f = "oleh";
-    unsigned int n;
 
-    n = do_strspn(s, f);
-    printf("%u\n", n);
+int main(void) {
+    int c3[3][3] = {
+            {0, 1, 5},
+            {10, 11, 12},
+            {1000, 101, 102},
+    };
+    int c5[5][5] = {
+            {0, 1, 5, 12124, 1234},
+            {10, 11, 12, 123521, 12512},
+            {1000, 101, 102, 12545, 214543435},
+            {100, 1012451, 11102, 12545, 214543435},
+            {10, 12401, 10452, 11542545, 1214543435},
+    };
+    print_diagsums1((int *)c3, 3);
+    print_diagsums1((int *)c5, 5);
     return 0;
 }
 
 
-
-void simple_print_buffer(char *buffer, unsigned int size)
-{
+void simple_print_buffer(char *buffer, unsigned int size) {
     unsigned int i;
 
     i = 0;
-    while (i < size)
-    {
-        if (i % 10)
-        {
+    while (i < size) {
+        if (i % 10) {
             printf(" ");
         }
-        if (!(i % 10) && i)
-        {
+        if (!(i % 10) && i) {
             printf("\n");
         }
         printf("0x%02x", buffer[i]);
@@ -55,10 +59,9 @@ int print_double_combination_numbers() {
         if (i < 99) {
             printf("%02d ", i);
             putchar(',');
-        }
-        else
+        } else
             printf("%02d ", i);
-            putchar(' ');
+        putchar(' ');
     }
     printf("\n");
     return 0;
