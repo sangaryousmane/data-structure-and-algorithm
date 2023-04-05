@@ -311,3 +311,14 @@ void print_remaining_days(int month, int day, int year) {
         }
     }
 }
+
+
+// The fprintf() function allows to specify where to send output.
+int playing(){
+    fprintf(stdout, "Hello world\n");
+    printf("Hello world");
+
+//    scanf();
+//    fscanf(stdin);
+    return 0;
+}

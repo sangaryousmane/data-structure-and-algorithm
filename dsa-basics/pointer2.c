@@ -145,3 +145,44 @@ void print_diagsums(int *a, int size) {
 
 }
 
+// Write a function that searches a string for any of a set of bytes.
+// This function does string searching. It looks for certain substring in a string
+// s is the string we want to search in. And accept is the substring
+char *do_strpbrk(char *s, char *accept) {
+    for (int i = 0; s[i] != '\0'; i++) { // Iterate over the main string
+        for (int j = 0; accept[j] != '\0'; j++) {  // Iterate over the accept substring
+            if (s[i] == accept[j]) {  // check whether a substring is found in a string
+                return &s[i];      // return the memory address of the i-th character if found, otherwise return NULL
+            }
+        }
+    }
+    return NULL;
+}
+#include <string.h>
+char *do_strstr(char* str1, char* str2) {
+
+    // These two loops find the length of str1 and str2 as long the null character is not reached
+    int len1 = 0;
+
+    while (str1[len1] != '\0'){
+        len1++;
+    }
+    int len2 = 0;
+    while (str2[len2] != '\0'){
+        len2++;
+    }
+
+    for (int i = 0; i <= len1 - len2; i++) {
+        int j;
+        for (j = 0; j < len2; j++) {
+            if (str1[i + j] != str2[j]) {
+                break;
+            }
+        }
+        if (j == len2) {
+            return &str1[i];
+        }
+    }
+
+    return NULL;
+}

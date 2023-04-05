@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-unsigned int do_strspn(char *a, char *b);
-void print_diagsums1(int *a, int size);
+double area_circumference(const double PI, double radius);
+double hypotenuse(double A, double B);
 
 char *do_that(char *s) {
     int len = 0;
@@ -14,20 +14,9 @@ char *do_that(char *s) {
 }
 
 int main(void) {
-    int c3[3][3] = {
-            {0, 1, 5},
-            {10, 11, 12},
-            {1000, 101, 102},
-    };
-    int c5[5][5] = {
-            {0, 1, 5, 12124, 1234},
-            {10, 11, 12, 123521, 12512},
-            {1000, 101, 102, 12545, 214543435},
-            {100, 1012451, 11102, 12545, 214543435},
-            {10, 12401, 10452, 11542545, 1214543435},
-    };
-    print_diagsums1((int *)c3, 3);
-    print_diagsums1((int *)c5, 5);
+
+    printf("hypotenuse is %.2lf", hypotenuse(2.3, 5.3));
+
     return 0;
 }
 
