@@ -2,7 +2,8 @@
 #include <string.h>
 
 
-int factorial2(int n);
+int fibonacci4(int n);
+unsigned int sumOfDigits(int n);
 char *do_that(char *s) {
     int len = 0;
     while (s[len] != '\0') {
@@ -14,10 +15,7 @@ char *do_that(char *s) {
 
 int main(void) {
 
-    int n = 5;
-    int result=factorial2(n);
-
-    printf("Factorial of %d is: %d ", n, result);
+    printf("Sum of digits is: %d ", sumOfDigits(451));
     return 0;
 }
 
