@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-double area_circumference(const double PI, double radius);
-double hypotenuse(double A, double B);
 
+int factorial2(int n);
 char *do_that(char *s) {
     int len = 0;
     while (s[len] != '\0') {
@@ -15,8 +14,10 @@ char *do_that(char *s) {
 
 int main(void) {
 
-    printf("hypotenuse is %.2lf", hypotenuse(2.3, 5.3));
+    int n = 5;
+    int result=factorial2(n);
 
+    printf("Factorial of %d is: %d ", n, result);
     return 0;
 }
 

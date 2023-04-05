@@ -57,6 +57,7 @@ int two_2_array2() {
 char *do_memset(char *s, char b, int n) {
     unsigned int count = 0;
 
+
     for (; count < n; count++) {
         s[count] = b;
     }
