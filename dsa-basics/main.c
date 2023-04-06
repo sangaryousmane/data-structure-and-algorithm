@@ -2,8 +2,8 @@
 #include <string.h>
 
 
-int fibonacci4(int n);
-unsigned int sumOfDigits(int n);
+int _pow_recursion(int x, int y);
+void _print_rev_recursion(char *n);
 char *do_that(char *s) {
     int len = 0;
     while (s[len] != '\0') {
@@ -15,7 +15,8 @@ char *do_that(char *s) {
 
 int main(void) {
 
-    printf("Sum of digits is: %d ", sumOfDigits(451));
+//    printf("Sum of digits is: %d ", sumOfDigits(451));
+    printf("Length is: %d" , _pow_recursion(3, 4));
     return 0;
 }
 
