@@ -2,8 +2,8 @@
 #include <string.h>
 
 
-int _pow_recursion(int x, int y);
-void _print_rev_recursion(char *n);
+int sumOfDigits(int n);
+int wildcmp(char *s, char *c);
 char *do_that(char *s) {
     int len = 0;
     while (s[len] != '\0') {
@@ -15,9 +15,9 @@ char *do_that(char *s) {
 
 int main(void) {
 
-//    printf("Sum of digits is: %d ", sumOfDigits(451));
-    printf("Length is: %d" , _pow_recursion(3, 4));
-    return 0;
+    int n = 135;
+    printf("sum digit of %d is %d ", n, sumOfDigits(n));
+    return (0);
 }
 
 
