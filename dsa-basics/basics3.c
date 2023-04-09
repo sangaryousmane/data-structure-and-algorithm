@@ -7,10 +7,99 @@
 #include <ctype.h>
 
 // Write a function that concatenates two string
+/**
+* _strcat - concatenates two strings
+* @dest: input value
+* @src: input value
+*
+* Return: void
+*/
 char *do_strcat(char *dest, char *src) {
-    char *result = strcat(dest, src);
-    return result;
+    int i;
+
+
+    i = 0;
+    while (dest[i] != '\0') {
+        i++;
+    }
+    int j;
+    for (j = 0; src[j] != '\0'; j++) {
+        dest[i + j] = src[j];
+    }
+
+    dest[i + j] = '\0';
+    return dest;
 }
+
+/**
+ * _isalpha - checks for alphabets
+ * @c: character to check
+ * Return: 0 if c is not an alpha, 1 otherwise
+ */
+int _isalpha(int c) {
+    return ((c >= 97 && c <= 122) || (c >= 65 && c <= 90));
+}
+
+/**
+ * _strncpy - copy a byte number of string to another
+ * @dest: destination string
+ * @src: source string
+ * @n: number of bytes
+ * Return: @dest
+ */
+char *_strncpy(char *dest, char *src, int n) {
+    int j;
+    j = 0;
+    while (j < n && src[j] != '\0') {
+        dest[j] = src[j];
+        j++;
+    }
+    while (j < n) {
+        dest[j] = '\0';
+        j++;
+    }
+    return (dest);
+}
+
+/**
+ * _isdigit - checks for a digit (0 through 9)
+ * @c: int to be checked
+ * Return: 1 if c is a digit, 0 otherwise
+ */
+int _isdigit(int c) {
+    if (c >= 48 && c <= 57) {
+        return (1);
+    } else {
+        return (0);
+    }
+}
+
+/**
+* _isupper - check for lower and uppercase letters
+*@c: the parameter to the _isupper function
+* Return: 0 if @c is lowercase , 1 otherwise
+*/
+int _isupper(int c) {
+    if (c >= 65 && c <= 90) {
+        return (1);
+    }
+    return (0);
+}
+
+/**
+* _islower - check for lowercase
+* @c: the parameter to the _islower function
+* Return: 1 if @c is lowercase , 0 otherwise
+*/
+int _islower(int c)
+{
+    if (c >= 97 && c <= 122)
+    {
+        return (1);
+    }
+    return (0);
+}
+
 
 // Write a function that concatenates two string
 // with a byte number
@@ -218,3 +307,31 @@ void print_buffer(char *b, int size) {
     }
     putchar('\n');
 }
+
+
+/**
+* _strstr - locates a substring
+* @haystack: the string to search
+* @needle: first occurence to find
+* Return: pointer to the beginning of string
+*/
+char *_strstr(char *haystack, char *needle)
+{
+    while (*haystack != '\0')
+    {
+        char *l = haystack;
+        char *p = needle;
+        while (*l == *p && *p != '\0')
+        {
+            l++;
+            p++;
+        }
+        if (*p == '\0') {
+            return (haystack);
+        }
+        haystack++;
+    }
+    return (0);
+}
+
+

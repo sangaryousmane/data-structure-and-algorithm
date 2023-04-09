@@ -116,21 +116,23 @@ int countVowels(char *str) {
 }
 
 // Write a function that prints a string, followed by a new line.
+// Non reversed
 void _puts_recursion(char *s) {
 
+
     if (*s == '\0') {
-        putchar('\n');
+        putchar('\n'); // Print a newline when reached the null character
     } else {
-        putchar(*s);
-        _puts_recursion(s + 1);
+         putchar(*s);  // Print the individual character
+        _puts_recursion(s + 1); // Go to the next character
     }
 }
 
 // Write a recursive program that prints a string in reverse
 void _print_rev_recursion(char *s) {
     if (*s != '\0') {
-        _print_rev_recursion(s + 1);
-        putchar(*s);
+        _print_rev_recursion(s + 1); // Go and print the next character
+        putchar(*s);  // recurse before printing, hence, reversing the string
     }
 }
 
@@ -138,7 +140,7 @@ void _print_rev_recursion(char *s) {
 int _strlen_recursion(char *s) {
 
     if (*s != '\0') {
-        return 1 + _strlen_recursion(s + 1);
+        return 1 + _strlen_recursion(s + 1); // find total length as long the null character is not reached
     }
     return 0;
 }

@@ -2,10 +2,10 @@
 #include <string.h>
 
 
-int is_lower_vowel(char n);
-int is_upper_vowel(char n);
-int vowel_count(char *s);
-int wildcmp(char *s, char *c);
+char *string_toupper(char *a);
+int _islower(int n);
+int _isdigit(int c);
+char *_strstr(char *s, char *c);
 char *do_that(char *s) {
     int len = 0;
     while (s[len] != '\0') {
@@ -16,11 +16,15 @@ char *do_that(char *s) {
 }
 
 int main(void) {
+    char c;
 
-//    int n = 135;
-//    printf("sum digit of %d is %d ", n, sumOfDigits(n));
 
-    printf("%d", vowel_count("Ousmane"));
+    char *s = "hello, world";
+    char *f = "world";
+    char *t;
+
+    t = _strstr(s, f);
+    printf("%s\n", t);
     return (0);
 }
 
