@@ -3,9 +3,13 @@
 #include <stdlib.h>
 
 char *string_toupper(char *a);
+
 int _islower(int n);
+
 int _isdigit(int c);
+
 char *_strstr(char *s, char *c);
+
 char *do_that(char *s) {
     int len = 0;
     while (s[len] != '\0') {
@@ -14,27 +18,78 @@ char *do_that(char *s) {
     printf("%d", len);
     return s;
 }
-int testing();
-int main(int argc, char* argv[]) {
 
-    testing();
-//    printf("This program was called with : %s\n", argv[0]);
-//    printf("%s\n", argv[argc]);
-//
-//    //
-//    printf("Let's see what is in argv\n");
-//
-//    int i = 1, sum = 0;
-//
-//    if (argc > 1){
-//        for (; i < argc; i++){
-//            printf("Argv[%d] = %s\n", i, argv[i]);
-//            sum += atoi(argv[i]);
-//        }
-//        printf("Total argument passed is: %d\n ", sum);
-//    }
+int testing();
+
+void commandline_args(int argc, char *const *argv);
+
+void alx_task1(int argc, char *const *argv);
+
+void args2(int argc, char *const *argv);
+
+int mul(int argc, char *const *argv);
+
+int main(int argc, char *argv[]) {
+    int i = 1, j, sum = 0;
+
+    // J for the character and i for the argument itself
+    while (i < argc){
+        j = 0;
+
+        while (argv[i][j] !='\0'){
+            if (argv[i][j] < '0' || argv[i][j] > '9'){
+                printf("Error\n"); // print Error is it's not a digit
+                return 1;  // Return 1 to indicate error
+            }
+            j++;  // Go to the next character
+        }
+        sum = sum + atoi(argv[i]); // Add numerical arguments
+        i++;
+    }
+    printf("%d\n", sum); // Print the arguments to the console
+
+
+}
+
+int mul(int argc, char *const *argv) {
+    int product = 0;
+
+    if (argc <= 2){
+        printf("Error\n");
+        return 1;
+    }
+    product = atoi(argv[1]) * atoi(argv[2]);
+    printf("%d\n", product);
 
     return (0);
+}
+
+void args2(int argc, char *const *argv) {
+    int i = 1;
+
+    if (argc > 1) {
+        for(; i < argc; i++) {
+            printf("%s\n", argv[i]);
+        }
+    }
+}
+
+void commandline_args(int argc, char *const *argv) {
+    printf("This program was called with : %s\n", argv[0]);
+    printf("%s\n", argv[argc]);
+
+    //
+    printf("Let's see what is in argv\n");
+
+    int i = 1, sum = 0;
+
+    if (argc > 1) {
+        for (; i < argc; i++) {
+            printf("Argv[%d] = %s\n", i, argv[i]);
+            sum += atoi(argv[i]);
+        }
+        printf("Total argument passed is: %d\n ", sum);
+    }
 }
 
 
