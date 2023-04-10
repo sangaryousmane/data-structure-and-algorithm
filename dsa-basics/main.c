@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+#include <stdlib.h>
 
 char *string_toupper(char *a);
 int _islower(int n);
@@ -14,17 +14,26 @@ char *do_that(char *s) {
     printf("%d", len);
     return s;
 }
+int testing();
+int main(int argc, char* argv[]) {
 
-int main(void) {
-    char c;
+    testing();
+//    printf("This program was called with : %s\n", argv[0]);
+//    printf("%s\n", argv[argc]);
+//
+//    //
+//    printf("Let's see what is in argv\n");
+//
+//    int i = 1, sum = 0;
+//
+//    if (argc > 1){
+//        for (; i < argc; i++){
+//            printf("Argv[%d] = %s\n", i, argv[i]);
+//            sum += atoi(argv[i]);
+//        }
+//        printf("Total argument passed is: %d\n ", sum);
+//    }
 
-
-    char *s = "hello, world";
-    char *f = "world";
-    char *t;
-
-    t = _strstr(s, f);
-    printf("%s\n", t);
     return (0);
 }
 

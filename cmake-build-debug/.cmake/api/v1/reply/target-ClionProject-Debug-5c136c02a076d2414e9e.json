@@ -55,7 +55,8 @@
 				8,
 				9,
 				10,
-				11
+				11,
+				12
 			]
 		}
 	],
@@ -103,7 +104,8 @@
 				8,
 				9,
 				10,
-				11
+				11,
+				12
 			]
 		}
 	],
@@ -179,6 +181,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "dsa-basics2/test.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dsa-basics/argcv.c",
 			"sourceGroupIndex" : 0
 		}
 	],
