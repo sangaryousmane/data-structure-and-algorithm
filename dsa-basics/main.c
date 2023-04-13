@@ -13,10 +13,18 @@ char *do_that(char *s) {
 
 
 void testing_malloc();
-
+int code100Days(int n);
 int main(int argc, char *argv[]) {
 
-    testing_malloc();
+    char *pr;
+
+
+    pr = malloc(strlen("Best School") + 1);
+    for (int i= 0; pr[i] !='\0'; i++){
+        printf("%c\n", pr[i]);
+
+    }
+    return 0;
 
 
 }
