@@ -12,14 +12,15 @@ char *do_that(char *s) {
 }
 
 
-void v2_rev_string(char *s);
+void v2_puts2(char *s);
 int main(int argc, char *argv[]) {
 
     char s[] = "My School is the best";
 
-    printf("%s\n", s);
-    v2_rev_string(s);
-    printf("%s\n", s);
+    char *str;
+
+    str = "0123456789";
+    v2_puts2(str);
 
     return 0;
 }

@@ -3,7 +3,7 @@
 //
 #include <stdio.h>
 
-int all(){
+int all() {
     int n = 10;
     int *p = &n;
 
@@ -17,7 +17,7 @@ int all(){
     return 0;
 }
 
-int sum(){
+int sum() {
     int n = 5;
     int *a = &n;
     a[1] = 40;
@@ -25,12 +25,12 @@ int sum(){
     return 0;
 }
 
-void reset_to98(int *n){
+void reset_to98(int *n) {
     *n = 98;
 
 }
 
-void swap(int *a, int *b){
+void swap(int *a, int *b) {
     int temp;
 
     temp = *a;
@@ -38,7 +38,7 @@ void swap(int *a, int *b){
     *b = temp;
 }
 
-int v2_strlen(char *s){
+int v2_strlen(char *s) {
 
 //    int i = 0, length = 0;
 //
@@ -48,38 +48,38 @@ int v2_strlen(char *s){
 
     int i = 0, length = 0;
 
-    while (s[i] != '\0'){
+    while (s[i] != '\0') {
         length++;
-        s +=1;
+        s += 1;
     }
     return length;
 }
 
-void v2_puts(char *str){
+void v2_puts(char *str) {
     puts(str);
 }
 
-void v2_print_rev(char *s){
+void v2_print_rev(char *s) {
 
-    int i = 0 ;
+    int i = 0;
     printf("Before\n%s\n", s);
 
-    for (; s[i] !=0; i++);
+    for (; s[i] != 0; i++);
 
     int end = i - 1;
     int index = end;
     printf("After\n");
 
-    while (index >= 0){
+    while (index >= 0) {
         putchar(s[index]);
         index--;
     }
     putchar('\n');
 }
 
-void v2_rev_string(char *s){
+void v2_rev_string(char *s) {
 
-   int length = v2_strlen(s);
+    int length = v2_strlen(s);
 
 //    while (s[i] != '\0'){
 //        length++;
@@ -89,7 +89,7 @@ void v2_rev_string(char *s){
     // Initialize start and end of the string
     int start = 0, end = length - 1;
 
-    while (start < end){
+    while (start < end) {
         char temp;
         temp = s[start];
         s[start] = s[end];
@@ -97,5 +97,21 @@ void v2_rev_string(char *s){
         start++;
         end--;
     }
+
+}
+
+void v2_puts2(char *str) {
+
+    for (int i = 0; str[i] != 0; i +=2) {
+        putchar(str[i]);
+    }
+
+//    int i = 0;
+//
+//    while (str[i] != 0){
+//        putchar(str[i]);
+//        i +=2;
+//    }
+      putchar('\n');
 
 }
