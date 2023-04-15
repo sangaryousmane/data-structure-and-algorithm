@@ -12,11 +12,11 @@ char *do_that(char *s) {
 }
 
 
-int v2_strlen(char *s);
+void print_rev(char *s);
 int main(int argc, char *argv[]) {
 
-    char *s = "Fred";
-    printf("%d\n", v2_strlen(s));
+    char *s = "Fred is ALX's CEO";
+    print_rev(s);
     return 0;
 }
 

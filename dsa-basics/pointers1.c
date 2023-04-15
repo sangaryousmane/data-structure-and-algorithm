@@ -58,3 +58,13 @@ int v2_strlen(char *s){
 void v2_puts(char *str){
     puts(str);
 }
+
+void v2_print_rev(char *s){
+
+    int i = 0;
+
+    while (s[i] != '\0'){
+        printf("%c", s[i]);
+        i--;
+    }
+}
