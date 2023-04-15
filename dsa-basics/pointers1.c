@@ -78,18 +78,24 @@ void v2_print_rev(char *s){
 }
 
 void v2_rev_string(char *s){
-    char *reverse = s;
-    int i = 0;
 
-    while (s[i] != 0){
-        i++;
+   int length = v2_strlen(s);
+
+//    while (s[i] != '\0'){
+//        length++;
+//        s++;
+//    }
+
+    // Initialize start and end of the string
+    int start = 0, end = length - 1;
+
+
+    while (start < end){
+        char temp;
+        temp = s[start];
+        s[start] = s[end];
+        s[end] = temp;
+        start++;
+        end--;
     }
-
-    int end = i - 1;
-
-    for (int index = end; index >= 0; index--){
-        reverse[index] = s[index];
-    }
-    printf("%s\n", reverse);
-
 }
