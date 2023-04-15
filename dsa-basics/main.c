@@ -12,21 +12,12 @@ char *do_that(char *s) {
 }
 
 
-void testing_malloc();
-int code100Days(int n);
+int v2_strlen(char *s);
 int main(int argc, char *argv[]) {
 
-    char *pr;
-
-
-    pr = malloc(strlen("Best School") + 1);
-    for (int i= 0; pr[i] !='\0'; i++){
-        printf("%c\n", pr[i]);
-
-    }
+    char *s = "Fred";
+    printf("%d\n", v2_strlen(s));
     return 0;
-
-
 }
 
 int sum_of_cmd(int argc, char *const *argv) {
