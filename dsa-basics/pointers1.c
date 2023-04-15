@@ -89,7 +89,6 @@ void v2_rev_string(char *s){
     // Initialize start and end of the string
     int start = 0, end = length - 1;
 
-
     while (start < end){
         char temp;
         temp = s[start];
@@ -98,4 +97,5 @@ void v2_rev_string(char *s){
         start++;
         end--;
     }
+
 }

@@ -15,7 +15,7 @@ char *do_that(char *s) {
 void v2_rev_string(char *s);
 int main(int argc, char *argv[]) {
 
-    char s[10] = "My School";
+    char s[] = "My School is the best";
 
     printf("%s\n", s);
     v2_rev_string(s);
