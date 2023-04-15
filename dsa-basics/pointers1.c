@@ -61,10 +61,35 @@ void v2_puts(char *str){
 
 void v2_print_rev(char *s){
 
+    int i = 0 ;
+    printf("Before\n%s\n", s);
+
+    for (; s[i] !=0; i++);
+
+    int end = i - 1;
+    int index = end;
+    printf("After\n");
+
+    while (index >= 0){
+        putchar(s[index]);
+        index--;
+    }
+    putchar('\n');
+}
+
+void v2_rev_string(char *s){
+    char *reverse = s;
     int i = 0;
 
-    while (s[i] != '\0'){
-        printf("%c", s[i]);
-        i--;
+    while (s[i] != 0){
+        i++;
     }
+
+    int end = i - 1;
+
+    for (int index = end; index >= 0; index--){
+        reverse[index] = s[index];
+    }
+    printf("%s\n", reverse);
+
 }
