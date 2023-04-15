@@ -55,6 +55,6 @@ int v2_strlen(char *s){
     return length;
 }
 
-void _puts(char *str){
-
+void v2_puts(char *str){
+    puts(str);
 }
