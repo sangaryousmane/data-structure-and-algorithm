@@ -11,9 +11,13 @@ char *do_that(char *s) {
     return s;
 }
 
-int largest_of_three(int a, int b, int c);
+void v2_rev_string(char *s);
 int main(int argc, char **argv){
-    largest_of_three(9, 0, 4);
+    char s[20];
+    puts("Enter a string to reverse: ");
+    scanf("%s", s);
+    v2_rev_string(s);
+    printf("Reversed version is: %s ", s);
     return (0);
 }
 
