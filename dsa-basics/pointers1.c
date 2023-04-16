@@ -115,3 +115,22 @@ void v2_puts2(char *str) {
       putchar('\n');
 
 }
+
+void v2_puts_half(char *str){
+    int length = v2_strlen(str);
+    int start, half = length / 2;
+
+    // If the length of the string is even
+    if (length % 2 == 0){
+        start = half;
+    } else{
+        start = half + 1;
+    }
+
+    int i = start;
+    while (i < length){
+        putchar(str[i]);
+        i++;
+    }
+    putchar('\n');
+}

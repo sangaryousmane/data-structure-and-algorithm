@@ -11,18 +11,10 @@ char *do_that(char *s) {
     return s;
 }
 
-
-void v2_puts2(char *s);
-int main(int argc, char *argv[]) {
-
-    char s[] = "My School is the best";
-
-    char *str;
-
-    str = "0123456789";
-    v2_puts2(str);
-
-    return 0;
+int largest_of_three(int a, int b, int c);
+int main(int argc, char **argv){
+    largest_of_three(9, 0, 4);
+    return (0);
 }
 
 int sum_of_cmd(int argc, char *const *argv) {

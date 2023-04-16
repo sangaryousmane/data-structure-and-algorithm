@@ -271,18 +271,23 @@ int comb_two_two_digit() {
 
 }
 
-// prints the largest of three integers.
+// TODO: DAY 4
+// TODO: prints the largest of three integers in C.
 int largest_of_three(int a, int b, int c) {
-    int largest;
-
-    if (a >= b && a >= c) {
+    int largest = 0;
+    // Check whether a is the greatest
+    if (a >= b && a >= c){
         largest = a;
-    } else if (b >= a && b >= c) {
+    }
+    // Check whether b is the largest
+    else if(b >= a && b >= c){
         largest = b;
-    } else {
+    }
+    // If none is, then C
+    else{
         largest = c;
     }
-    printf("%d is the largest", largest);
+    printf("Largest = %d\n", largest);
     return 0;
 }
 
