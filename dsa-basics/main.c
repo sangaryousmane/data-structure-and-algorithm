@@ -11,9 +11,14 @@ char *do_that(char *s) {
     return s;
 }
 
-void v2_puts2(char *s);
+char *v2_strcpy(char *dest, char *src);
 int main(int argc, char **argv){
-    v2_puts2("3292trf010");
+
+    char s[30];
+    char *ptr;
+    ptr = v2_strcpy(s, "John is an amazing guy");
+    printf("Source: %s\n", s);
+    printf("Destination: %s\n", ptr);
     return (0);
 }
 

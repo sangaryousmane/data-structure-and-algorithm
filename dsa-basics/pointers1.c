@@ -153,3 +153,38 @@ void v2_puts_half(char *str){
     }
     putchar('\n');
 }
+/**
+ * Write a function that prints n elements of an array of integers,
+ * followed by a new line.
+ */
+void v2_print_array(int *a, int n){
+    int i = 0;
+
+    while (i < n){
+        printf("%d, ", *(a+i));
+        i++;
+    }
+
+}
+/**
+ * Write a function that copies the string pointed
+ * to by src, including the terminating null byte (\0),
+ * to the buffer pointed to by dest.
+ * @param dest
+ * @param src
+ * @return
+ */
+char *v2_strcpy(char *dest, char *src){
+    int i = 0, j = 0;
+
+    while (src[i] != 0){
+        i++;
+    }
+
+    while (j < i){
+        dest[j]=src[j];
+        j++;
+    }
+    dest[i] = '\0';
+    return dest;
+}
