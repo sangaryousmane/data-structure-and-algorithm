@@ -11,13 +11,9 @@ char *do_that(char *s) {
     return s;
 }
 
-void v2_rev_string(char *s);
+void v2_puts2(char *s);
 int main(int argc, char **argv){
-    char s[20];
-    puts("Enter a string to reverse: ");
-    scanf("%s", s);
-    v2_rev_string(s);
-    printf("Reversed version is: %s ", s);
+    v2_puts2("3292trf010");
     return (0);
 }
 

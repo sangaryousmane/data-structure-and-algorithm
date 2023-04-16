@@ -103,17 +103,26 @@ void v2_rev_string(char *s) {
         temp =s[start];
         s[start] = s[end];
         s[end] = temp;
-        s++;
+        start++;
         end--;
     }
 
 
 }
 
+/**
+ * Write a function that prints every other character of a string,
+ * starting with the first character, followed by a new line.
+ * @param str
+ */
+#include <stdlib.h>
 void v2_puts2(char *str) {
 
     for (int i = 0; str[i] != 0; i +=2) {
-        putchar(str[i]);
+        if (str[i] < '0' || str[i] > '9')
+            exit(98);
+        else
+            putchar(str[i]);
     }
 
 //    int i = 0;
