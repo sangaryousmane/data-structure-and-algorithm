@@ -11,7 +11,7 @@ char *do_that(char *s) {
     return s;
 }
 
-char *v2_strcpy(char *dest, char *src);
+char *create_array(unsigned int a, char b);
 int main(int argc, char **argv){
 
     char s[30];

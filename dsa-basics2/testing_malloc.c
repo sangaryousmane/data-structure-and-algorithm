@@ -50,24 +50,23 @@ int testing_malloc(){
 }
 
 char *create_array(unsigned int size, char c){
-    char *s;
+
+    char *new_arr;
     unsigned int i = 0;
-
-    if (size == 0){
+    if (size == 0)
         return NULL;
-    }
 
-    s = malloc(sizeof(char) * size);
+    // Dynamically allocate memory for the new character
+    new_arr = malloc(sizeof(char) * size);
 
-    if (s == NULL) {
+    if (new_arr == NULL)
         return NULL;
-    }
 
     while (i < size){
-        s[i] = c;
+        new_arr[i] = c;
         i++;
     }
-    return s;
+    return new_arr;
 }
 int tired(int n){
     if (n == 0)
