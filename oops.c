@@ -23,6 +23,13 @@ struct User *new_user(char *name, char *email, int age) {
     return user;
 }
 
+typedef struct Phone{
+    char *brand;
+    int ram;
+    int storage;
+}phone;
+
+
 int display() {
     struct User *user;
 
