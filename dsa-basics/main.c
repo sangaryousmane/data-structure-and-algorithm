@@ -12,10 +12,10 @@ char *do_that(char *s) {
 }
 char *v2_strdup(char *s);
 char *create_array(unsigned int a, char b);
-int income_calculator(double balance, double salary);
+int display();
 int main(int argc, char **argv){
 
-    income_calculator(1000.0, 2000.0);
+    display();
     return (0);
 }
 
