@@ -40,9 +40,21 @@ void print_dog(struct dog *d){
 }
 
 
+typedef struct dog dog_t;
 
+
+
+dog_t *new_dog(char *name, float age, char *owner){
+
+    struct dog *d;
+
+    if (d == NULL)
+        return NULL;
+
+
+}
 void show() {
-    struct dog my_dog;
+    dog_t my_dog;
 
     my_dog.name = NULL;
     my_dog.age = 3.5;

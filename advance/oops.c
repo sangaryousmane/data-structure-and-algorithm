@@ -30,6 +30,7 @@ typedef struct Phone{
 }Phone;
 
 
+
 int display() {
     struct User *user;
     user = new_user("Ousmane Sangary", "sangary@gmail.com", 24);
