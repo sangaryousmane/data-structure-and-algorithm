@@ -10,15 +10,12 @@ char *do_that(char *s) {
     printf("%d", len);
     return s;
 }
-
+char *v2_strdup(char *s);
 char *create_array(unsigned int a, char b);
+int income_calculator(double balance, double salary);
 int main(int argc, char **argv){
 
-    char s[30];
-    char *ptr;
-    ptr = v2_strcpy(s, "John is an amazing guy");
-    printf("Source: %s\n", s);
-    printf("Destination: %s\n", ptr);
+    income_calculator(1000.0, 2000.0);
     return (0);
 }
 

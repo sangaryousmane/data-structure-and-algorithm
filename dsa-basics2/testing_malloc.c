@@ -20,6 +20,7 @@ void test_malloc(){
 }
 
 
+
 void test2(int n){
     int *tab;
 
@@ -141,7 +142,7 @@ int **alloc_grid(int width, int height) {
  * @s2: input two to concat
  * Return: concat of s1 and s2
  */
-char *str_concat(char *s1, char *s2)
+char *v2_str_concat(char *s1, char *s2)
 {
     char *conct;
     int i, ci;
@@ -218,6 +219,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size) {
 }
 
 #include <stdlib.h>
+
+void helper_func(double balance, double salary, double expenditure, double net_income);
+
 /*
  * _calloc - uses malloc to allocate memory for an array
  * @nmemb: number of memory block
@@ -334,7 +338,6 @@ int hello_C(){
 
 
 // TODO: DAY 3 of 100 days
-
 int calculate_input(){
 
     char s;
@@ -370,4 +373,40 @@ int calculate_input(){
         default:
             printf("Your input is invalid, please enter valid number");
     }
+    return 0;
 }
+
+// TODO: Day 5, calculating income
+void income_calculator(double balance, double salary){
+    char name[50];
+    double expenditure, net_income = 0;
+    printf("\nPLEASE ENTER YOUR DETAILS:\n");
+    printf("--------------------------\n");
+    printf("Enter your name:\n");
+    scanf("%s", name);
+    printf("Your total expenditure:\n");
+    scanf("%lf", &expenditure);
+    printf("Hello, %s\n", name);
+    printf("Your current balance is: %.2lf\n", balance);
+    printf("Your monthly salary is: %.2lf\n", salary);
+    helper_func(balance, salary, expenditure, net_income);
+}
+
+void helper_func(double balance, double salary,
+                 double expenditure, double net_income) {
+    if (expenditure > salary){
+        printf("Your salary is not enough for deduction\n");
+    }
+    net_income = salary - expenditure;
+    balance +=net_income;
+    printf("Monthly income after expenditure is: %.2lf\n", net_income);
+    printf("Monthly balance is: %.2lf\n", balance);
+    net_income = net_income * 12;
+    printf("Annual income is: %.2lf\n", net_income);
+
+    puts("Thank you for visiting our ATM...");
+}
+
+
+
+// TODO: Helper function to upper income_calculator()
