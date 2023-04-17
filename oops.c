@@ -27,23 +27,21 @@ typedef struct Phone{
     char *brand;
     int ram;
     int storage;
-}phone;
+}Phone;
 
 
 int display() {
     struct User *user;
-
-//    user.name = "Ousmane Sangary";
-//    user.email = "sangary@gmail.com";
-//    user.age = 24;
-
     user = new_user("Ousmane Sangary", "sangary@gmail.com", 24);
-
     if (user == NULL)
         return 1;
 
     printf("Name: %s\n", user->name);
     printf("Email: %s\n", user->email);
     printf("Age: %d\n", user->age);
+
+    Phone phone;
+
+
     return 0;
 }
