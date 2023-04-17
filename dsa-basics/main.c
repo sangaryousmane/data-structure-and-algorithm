@@ -12,10 +12,10 @@ char *do_that(char *s) {
 }
 char *v2_strdup(char *s);
 char *create_array(unsigned int a, char b);
-int display();
+void show();
 int main(int argc, char **argv){
 
-    display();
+    show();
     return (0);
 }
 
