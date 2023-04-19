@@ -12,10 +12,13 @@ char *do_that(char *s) {
 }
 char *v2_strdup(char *s);
 char *create_array(unsigned int a, char b);
-void show();
+int print_lower_except_e_q();
+
+void body_mass_and_weight();
+void decide_health(float weight);
 int main(int argc, char **argv){
 
-    show();
+    body_mass_and_weight();
     return (0);
 }
 
@@ -176,4 +179,28 @@ int change_cent(int argc, char *argv[]) {
 
     return (0);
 
+}
+
+
+
+// TODO: DAY 7, Calculating body, weight and mass of a person
+void body_mass_and_weight() {
+    float weight, height, bmi;
+    puts("Enter your weight in kilograms:");
+    scanf("%f", &weight);
+    puts("Enter your height in meters:");
+    scanf("%f", &height);
+
+    bmi = weight / (height * height);
+
+    printf("Your BMI is: %f\n", bmi);
+    decide_health(weight);
+}
+
+// TODO: this function check a person's body weight and recommend
+void decide_health(float weight) {
+    if (weight > 60)
+        printf("You should exercise more.\n");
+    else
+        printf("You are healthy.\n");
 }
