@@ -151,6 +151,12 @@ build CMakeFiles/ClionProject.dir/advance/task_alx.c.obj: C_COMPILER__ClionProje
   OBJECT_DIR = CMakeFiles\ClionProject.dir
   OBJECT_FILE_DIR = CMakeFiles\ClionProject.dir\advance
 
+build CMakeFiles/ClionProject.dir/dsa-basics2/func_pointers/first.c.obj: C_COMPILER__ClionProject_Debug C$:/Users/sanga/Documents/ClionProject/c-programming/dsa-basics2/func_pointers/first.c || cmake_object_order_depends_target_ClionProject
+  DEP_FILE = CMakeFiles\ClionProject.dir\dsa-basics2\func_pointers\first.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\ClionProject.dir
+  OBJECT_FILE_DIR = CMakeFiles\ClionProject.dir\dsa-basics2\func_pointers
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ClionProject
@@ -159,7 +165,7 @@ build CMakeFiles/ClionProject.dir/advance/task_alx.c.obj: C_COMPILER__ClionProje
 #############################################
 # Link the executable ClionProject.exe
 
-build ClionProject.exe: C_EXECUTABLE_LINKER__ClionProject_Debug CMakeFiles/ClionProject.dir/dsa-basics2/functions_.c.obj CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics1.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics2.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics3.c.obj CMakeFiles/ClionProject.dir/dsa-basics/very_basics.c.obj CMakeFiles/ClionProject.dir/dsa-basics/pointers1.c.obj CMakeFiles/ClionProject.dir/dsa-basics/pointer2.c.obj CMakeFiles/ClionProject.dir/dsa-basics/hello_world.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/structs1.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/recursion.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/test.c.obj CMakeFiles/ClionProject.dir/dsa-basics/argcv.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/testing_malloc.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/testing_malloc2.c.obj CMakeFiles/ClionProject.dir/advance/oops.c.obj CMakeFiles/ClionProject.dir/advance/task_alx.c.obj
+build ClionProject.exe: C_EXECUTABLE_LINKER__ClionProject_Debug CMakeFiles/ClionProject.dir/dsa-basics2/functions_.c.obj CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics1.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics2.c.obj CMakeFiles/ClionProject.dir/dsa-basics/basics3.c.obj CMakeFiles/ClionProject.dir/dsa-basics/very_basics.c.obj CMakeFiles/ClionProject.dir/dsa-basics/pointers1.c.obj CMakeFiles/ClionProject.dir/dsa-basics/pointer2.c.obj CMakeFiles/ClionProject.dir/dsa-basics/hello_world.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/structs1.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/recursion.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/test.c.obj CMakeFiles/ClionProject.dir/dsa-basics/argcv.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/testing_malloc.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/testing_malloc2.c.obj CMakeFiles/ClionProject.dir/advance/oops.c.obj CMakeFiles/ClionProject.dir/advance/task_alx.c.obj CMakeFiles/ClionProject.dir/dsa-basics2/func_pointers/first.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ClionProject.dir
