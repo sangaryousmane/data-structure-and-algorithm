@@ -97,7 +97,7 @@ int int_index(int *array, int size, int (*cmp)(int)){
  *
  * Return: Always 0 (Success)
  */
-int main(int argc, char *argv[])
+int args(int argc, char *argv[])
 {
     int bytes, i;
     char *arr;
@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
     if (argc < 2)
     {
         printf("Error\n");
-        return (1);
+        exit(1);
     }
 
     bytes = atoi(argv[1]);
@@ -113,10 +113,10 @@ int main(int argc, char *argv[])
     if (bytes < 0)
     {
         printf("Error\n");
-        return (2);
+        exit(2);
     }
 
-    arr = (char *)main;
+    arr = (char *)args;
 
     for (i = 0; i < bytes; i++)
     {
@@ -129,3 +129,4 @@ int main(int argc, char *argv[])
 
     return (0);
 }
+
