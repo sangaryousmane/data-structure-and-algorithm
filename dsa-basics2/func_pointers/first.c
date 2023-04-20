@@ -11,6 +11,7 @@ int v2_add(int a, int b){
 int v2_subtract(int a, int b){
     return (a - b);
 }
+void hi();
 void show_result(){
     int result;
 //    int (*ptr)(int , int);
@@ -22,6 +23,9 @@ void show_result(){
     int (*ptr)(int, int);
     ptr = v2_subtract;
     result = ptr(14, 5);
+
+    void (*p)() = &hi;
+
 
     printf("The result is: %d", result);
 }
