@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
+#include <stdarg.h>
 char *do_that(char *s) {
     int len = 0;
     while (s[len] != '\0') {
@@ -17,10 +17,36 @@ int print_lower_except_e_q();
 void body_mass_and_weight();
 void decide_health(float weight);
 void linear_search_implement();
-int main(int argc, char **argv){
 
-    linear_search_implement();
+int sum_(int count, ...)
+{
+    int total = 0;
+    va_list args;
+    va_start(args, count);
+    for (int i = 0; i < count; i++)
+    {
+        total += va_arg(args, int);
+    }
+    va_end(args);
+    return total;
+}
+void hello();
+
+void pointer(char *s);
+int add_two_numbers(int, int);
+int main(int argc, char **argv){
+//    int arr[] = {3, 2, 4};
+
+
+    pointer("I love C"); // Calling the function
     return (0);
+}
+
+void display2() {
+    int s1 = sum_(6, 1, 2, 4, 5, 7, 6);
+    int s2 = sum_(3, 1, 2, 3);
+    printf("s1 = %d\n", s1);
+    printf("s2 = %d\n", s2);
 }
 
 int sum_of_cmd(int argc, char *const *argv) {

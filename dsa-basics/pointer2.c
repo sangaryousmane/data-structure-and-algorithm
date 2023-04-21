@@ -124,7 +124,7 @@ void print_chessboard(char (*a)[8]) {
     }
 }
 
-// Write a function that prints the sum of the two diagonals of a square matrix of integers.
+// Write a function that prints the sum_ of the two diagonals of a square matrix of integers.
 void print_diagsums(int *a, int size) {
     int index = 0, sum1 = 0, sum2 = 0;
 

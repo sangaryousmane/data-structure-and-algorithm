@@ -81,18 +81,18 @@ int fibonacci4(int n) {
 }
 
 
-// Write a recursive function called sumDigits to return the sum of all the digits in a given integer value.  Use a helper function if necessary.
+// Write a recursive function called sumDigits to return the sum_ of all the digits in a given integer value.  Use a helper function if necessary.
 unsigned int sumOfDigits(int n) {
 
 //    int i = 1;
-//    int j, k, sum = 0;
+//    int j, k, sum_ = 0;
 //    while (i <= n) {
 //        j = n % 10;
 //        k = n / 10;
-//        sum = j + k;
+//        sum_ = j + k;
 //        i++;
 ////    }
-//    printf("Sum is %d\n", sum);
+//    printf("Sum is %d\n", sum_);
     // Base case
     if (n == 0)
         return 0;
