@@ -1,6 +1,6 @@
 # ninja log v5
-503	981	7035968174055139	ClionProject.exe	54b9e56f06bb4ad3
-5	501	7035968169525203	CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj	ce843a85ef9e4089
+666	1057	7036697422820019	ClionProject.exe	f6624506979c52d3
+4	662	7036697418996333	CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj	ce843a85ef9e4089
 144	1196	7035966485737034	CMakeFiles/ClionProject.dir/dsa-basics/very_basics.c.obj	b47480dbd39157a8
 38	676	7015230736124194	CMakeFiles/ClionProject.dir/dsa-basics/basics.c.obj	2b4c78bcacb3cbdc
 4	1288	7034082796509256	CMakeFiles/ClionProject.dir/oops.c.obj	2e572dc44791bc6a
@@ -10,9 +10,10 @@
 108	712	7027193188162594	CMakeFiles/ClionProject.dir/dsa-basics/pointer2.c.obj	621f426bc063c312
 280	1091	7021200611384666	CMakeFiles/ClionProject.dir/dsa-basics2/functions_.cpp.obj	1da2e4f3e9b7e466
 74	627	7034049408854982	CMakeFiles/ClionProject.dir/dsa-basics2/testing_malloc2.c.obj	b58fae7de14769df
-2	882	7036580098350615	build.ninja	d4714726070b665
+2	882	7036713224035219	build.ninja	d4714726070b665
 5	280	7021201195272836	CMakeFiles/ClionProject.dir/dsa-basics/dsa-basics2/functions_.cpp.obj	ff587342cd80b564
 4	256	7021461470347420	CMakeFiles/ClionProject.dir/dsa-basics2/functions_.c.obj	9f930aaff667f3fc
+43	666	7036697418996333	CMakeFiles/ClionProject.dir/dsa-basics2/func_pointers/first.c.obj	e3147898bcd97612
 3	227	7033217949259022	CMakeFiles/ClionProject.dir/dsa-basics/pointers1.c.obj	5073677b94a558d2
 71	756	7023730699714663	CMakeFiles/ClionProject.dir/dsa-basics/hello_world.c.obj	d47bc4037d107b88
 4	205	7023759623958470	CMakeFiles/ClionProject.dir/dsa-basics2/structs1.c.obj	afe248f4608a3ecc
@@ -23,3 +24,13 @@
 122	2186	7033164639650335	CMakeFiles/ClionProject.dir/Mini_Project_in_C_Snake_Game/snake_game.c.obj	e38c7e12f7b40c9b
 5	227	7034161434548788	CMakeFiles/ClionProject.dir/advance/oops.c.obj	f96258db4ba87ead
 6	684	7034398579266320	CMakeFiles/ClionProject.dir/advance/task_alx.c.obj	174b3b6ed1d4e50a
+81	827	7036755815566231	CMakeFiles/ClionProject.dir/dsa-basics2/func_pointers/design.c.obj	12aa1808f5989c87
+97	835	7036755815566231	CMakeFiles/ClionProject.dir/dsa-basics2/func_pointers/first.c.obj	e3147898bcd97612
+12	839	7036755815687302	CMakeFiles/ClionProject.dir/dsa-basics/main.c.obj	ce843a85ef9e4089
+840	1344	7036755820439125	ClionProject.exe	1c815aa0c541bfe0
+4	306	7036756084244728	CMakeFiles/ClionProject.dir/dsa-basics2/func_pointers/design.c.obj	12aa1808f5989c87
+308	704	7036756088017855	ClionProject.exe	1c815aa0c541bfe0
+6	633	7036756427459566	CMakeFiles/ClionProject.dir/dsa-basics2/func_pointers/design.c.obj	12aa1808f5989c87
+635	1141	7036756431676185	ClionProject.exe	1c815aa0c541bfe0
+4	191	7036756600667518	CMakeFiles/ClionProject.dir/dsa-basics2/func_pointers/design.c.obj	12aa1808f5989c87
+192	465	7036756603211491	ClionProject.exe	1c815aa0c541bfe0

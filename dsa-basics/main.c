@@ -16,9 +16,10 @@ int print_lower_except_e_q();
 
 void body_mass_and_weight();
 void decide_health(float weight);
+void linear_search_implement();
 int main(int argc, char **argv){
 
-    body_mass_and_weight();
+    linear_search_implement();
     return (0);
 }
 
