@@ -21,11 +21,11 @@ int linear_search(int arr[], int n, int x)
 int linear_search_implement()
 {
     int size = 6;
-    int arr[] = {1, 2, 3, 4, -10, 5};
+    int arr[] = {1, 2, 3, -34, -10, 5};
     int result = minimumElement(arr, size);
 
-    printf("The minimum number is: %d", result);
-
+    printf("The minimum number is: %d\n", result);
+    return 0;
 }
 
 
@@ -33,12 +33,14 @@ int linear_search_implement()
 // TODO: this function uses linear search algorithm
 int minimumElement(int array[], int size){
     int minimum =array[0], i =0;
-    for (i; i < size; i++){
-        if (array[i] < minimum){
-            minimum = array[i];
+    if (size > 0 && array !=NULL) {
+
+        for (i; i < size; i++) {
+            if (array[i] < minimum) {
+                minimum = array[i];
+            }
         }
     }
-
     return minimum;
 }
 
