@@ -33,13 +33,22 @@ int sum_(int count, ...)
 void hello();
 
 void pointer(char *s);
-int add_two_numbers(int, int);
+void point_to_ILoveCFunc();
+
+
+void eid_mubarak();
+
 int main(int argc, char **argv){
-//    int arr[] = {3, 2, 4};
 
-
-    pointer("I love C"); // Calling the function
+    eid_mubarak();
     return (0);
+}
+
+// TODO: DAY 10, Today is EID and we are breaking bones. No code today
+void eid_mubarak()
+{
+    puts("EID MUBARAK!✨🎉");
+    printf("%d", 50);
 }
 
 void display2() {
