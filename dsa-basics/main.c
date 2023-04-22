@@ -18,29 +18,11 @@ void body_mass_and_weight();
 void decide_health(float weight);
 void linear_search_implement();
 
-int sum_(int count, ...)
-{
-    int total = 0;
-    va_list args;
-    va_start(args, count);
-    for (int i = 0; i < count; i++)
-    {
-        total += va_arg(args, int);
-    }
-    va_end(args);
-    return total;
-}
-void hello();
-
-void pointer(char *s);
-void point_to_ILoveCFunc();
-
-
-void eid_mubarak();
+int show_main();
 
 int main(int argc, char **argv){
 
-    eid_mubarak();
+    show_main();
     return (0);
 }
 
@@ -49,13 +31,6 @@ void eid_mubarak()
 {
     puts("EID MUBARAK!✨🎉");
     printf("%d", 50);
-}
-
-void display2() {
-    int s1 = sum_(6, 1, 2, 4, 5, 7, 6);
-    int s2 = sum_(3, 1, 2, 3);
-    printf("s1 = %d\n", s1);
-    printf("s2 = %d\n", s2);
 }
 
 int sum_of_cmd(int argc, char *const *argv) {

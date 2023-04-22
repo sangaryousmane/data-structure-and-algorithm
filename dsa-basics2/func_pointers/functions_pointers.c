@@ -118,8 +118,114 @@ void point_to_ILoveCFunc() {
     printf("You're %d years old", result);
 
 }
+#include <stdio.h>
+#include <stdarg.h>
+
+int sum_them_all(const unsigned int n, ...)
+{
+    va_list nums;
+    unsigned int i = 0;
+    int sum = 0;
+    va_start(nums, n); // Much like a function that starts our initialization
+    while (i < n)
+    {
+        sum += va_arg(nums, int); // Much like a function that access our variables
+        i++;
+    }
+    va_end(nums);  // Much like a function that free everything from memory after using it
+    return sum;
+}
+
+int show_main()
+{
+    int s1 = sum_them_all(2, 1, 2);
+    int s2 = sum_them_all(3, 1, 2, 3);
+    printf("s1 = %d\n", s1);
+    printf("s2 = %d\n", s2);
+    return 0;
+}
 
 
 
 
+void print_numbers(const char *separator, const unsigned int n, ...)
+{
+    va_list nums;
+    unsigned int index = 0;
+    va_start(nums, n);
+    while (index < n)
+    {
+        printf("%d", va_arg(nums, int));
+        if (index != (n - 1) && separator != NULL)
+            printf("%s", separator);
+        index++;
+    }
+    printf("\n");
+    va_end(nums);
+}
 
+void print_strings(const char *separator, const unsigned int n, ...)
+{
+    va_list strings;
+    char *str;
+    unsigned int index = 0;
+    va_start(strings, n);
+    while (index < n)
+    {
+        str = va_arg(strings, char *);
+        switch (str != NULL)
+        {
+            case 1:
+                printf("%s", str);
+                break;
+            case 0:
+                printf("(nil)");
+                break;
+        }
+        if (index != (n - 1) && separator != NULL)
+            printf("%s", separator);
+        index++;
+    }
+    printf("\n");
+    va_end(strings);
+}
+
+
+void print_formatted_output(const char * const format, ...)
+{
+    int index = 0;
+    char *str, *separator = "";
+    va_list args;
+    va_start(args, format);
+    if (format != NULL)
+    {
+        while (format[index])
+        {
+            switch (format[index])
+            {
+                case 'c':
+                    printf("%s%c", separator, va_arg(args, int));
+                    break;
+                case 'i':
+                    printf("%s%d", separator, va_arg(args, int));
+                    break;
+                case 'f':
+                    printf("%s%f", separator, va_arg(args, double));
+                    break;
+                case 's':
+                    str = va_arg(args, char *);
+                    if (str == NULL)
+                        str = "(nil)";
+                    printf("%s%s", separator, str);
+                    break;
+                default:
+                    index++;
+                    continue;
+            }
+            separator = ", ";
+            index++;
+        }
+    }
+    printf("\n");
+    va_end(args);
+}
