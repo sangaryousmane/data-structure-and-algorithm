@@ -193,39 +193,39 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 void print_formatted_output(const char * const format, ...)
 {
-    int index = 0;
-    char *str, *separator = "";
-    va_list args;
-    va_start(args, format);
+    int i = 0;
+    char *s, *separator = "";
+    va_list arguments;
+    va_start(arguments, format);
     if (format != NULL)
     {
-        while (format[index])
+        while (format[i])
         {
-            switch (format[index])
+            switch (format[i])
             {
                 case 'c':
-                    printf("%s%c", separator, va_arg(args, int));
+                    printf("%s%c", separator, va_arg(arguments, int));
                     break;
                 case 'i':
-                    printf("%s%d", separator, va_arg(args, int));
+                    printf("%s%d", separator, va_arg(arguments, int));
                     break;
                 case 'f':
-                    printf("%s%f", separator, va_arg(args, double));
+                    printf("%s%f", separator, va_arg(arguments, double));
                     break;
                 case 's':
-                    str = va_arg(args, char *);
-                    if (str == NULL)
-                        str = "(nil)";
-                    printf("%s%s", separator, str);
+                    s = va_arg(arguments, char *);
+                    if (s == NULL)
+                        s = "(nil)";
+                    printf("%s%s", separator, s);
                     break;
                 default:
-                    index++;
+                    i++;
                     continue;
             }
             separator = ", ";
-            index++;
+            i++;
         }
     }
     printf("\n");
-    va_end(args);
+    va_end(arguments);
 }
