@@ -18,11 +18,11 @@ void body_mass_and_weight();
 void decide_health(float weight);
 void linear_search_implement();
 
-int show_main();
+int show_Me();
 
 int main(int argc, char **argv){
 
-    show_main();
+    show_Me();
     return (0);
 }
 

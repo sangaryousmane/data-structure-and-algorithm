@@ -29,7 +29,18 @@ typedef struct Phone{
     int storage;
 }Phone;
 
+typedef struct Location{
+    char *state;
+    long zipCode;
+    char *country;
+} Location;
 
+struct Movie{
+    char *name;
+    double start_time;
+    char *series;
+    Location location;
+};
 
 int display() {
     struct User *user;
@@ -43,6 +54,28 @@ int display() {
 
     Phone phone;
 
+    printf("Brand Name: %s\n", phone.brand);
+    printf("Ram: %d\n", phone.ram);
+    printf("Storage: %d\n", phone.storage);
 
+    return 0;
+}
+
+int show_Me(){
+    struct Movie movie;
+    Location location;
+
+
+    location.country = "USA";
+    location.state = "California";
+    location.zipCode = 420021;
+
+    movie.name="Journey to the west";
+    movie.series="American";
+    movie.start_time = 11.0;
+    movie.location = location;
+
+    printf("ZipCode: %ld", movie.location.zipCode);
+    printf("Address: %s", movie.location.country);
     return 0;
 }
