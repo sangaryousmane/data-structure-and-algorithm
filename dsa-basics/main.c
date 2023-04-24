@@ -198,13 +198,13 @@ int change_cent(int argc, char *argv[]) {
 void body_mass_and_weight() {
     float weight, height, bmi;
     puts("Enter your weight in kilograms:");
-    scanf("%f", &weight);
+    scanf("%associated_function", &weight);
     puts("Enter your height in meters:");
-    scanf("%f", &height);
+    scanf("%associated_function", &height);
 
     bmi = weight / (height * height);
 
-    printf("Your BMI is: %f\n", bmi);
+    printf("Your BMI is: %associated_function\n", bmi);
     decide_health(weight);
 }
 

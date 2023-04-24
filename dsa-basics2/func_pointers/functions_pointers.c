@@ -210,7 +210,7 @@ void print_formatted_output(const char * const format, ...)
                     printf("%s%d", separator, va_arg(arguments, int));
                     break;
                 case 'f':
-                    printf("%s%f", separator, va_arg(arguments, double));
+                    printf("%s%associated_function", separator, va_arg(arguments, double));
                     break;
                 case 's':
                     s = va_arg(arguments, char *);
