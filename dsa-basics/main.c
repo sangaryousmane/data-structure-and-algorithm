@@ -18,11 +18,12 @@ void body_mass_and_weight();
 void decide_health(float weight);
 void linear_search_implement();
 
-int show_Me();
+int sum_Of_max_min(int arr[], int size);
 
 int main(int argc, char **argv){
-
-    show_Me();
+    int arr[5] = {7, 5, 4, 2,-1};
+    int result = sum_Of_max_min(arr, 5);
+    printf("Sum of min and max is: %d ", result);
     return (0);
 }
 
@@ -51,8 +52,7 @@ int sum_of_cmd(int argc, char *const *argv) {
         i++;
     }
     printf("%d\n", sum); // Print the arguments to the console
-
-
+    return 0;
 }
 
 int mul(int argc, char *const *argv) {

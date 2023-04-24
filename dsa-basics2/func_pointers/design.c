@@ -35,7 +35,7 @@ int minimumElement(int array[], int size){
     int minimum =array[0], i =0;
     if (size > 0 && array !=NULL) {
 
-        for (i; i < size; i++) {
+        for (; i < size; i++) {
             if (array[i] < minimum) {
                 minimum = array[i];
             }
@@ -45,5 +45,17 @@ int minimumElement(int array[], int size){
 }
 
 
+// TODO: DAY 11, completing Linear Search Algorithm in C
+// TODO: Search for the minimum and maximum element and return their sum
+int sum_Of_max_min(int arr[], int size){
+    int min, max;
+    int i = 0;
+    for (; i < size; i++){
+        if (arr[i] > max)
+            max = arr[i];
 
-
+        if (arr[i] < min)
+            min = arr[i];
+    }
+    return max + min;
+}
